@@ -1,35 +1,4 @@
 package speedhome.interview.boot;
-//
-//import org.junit.jupiter.api.Test;
-//import org.junit.runner.RunWith;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.test.context.junit4.SpringRunner;
-
-//
-//@RunWith(SpringRunner.class)
-//@SpringBootTest
-//public class BookServiceTests {
-//
-//    @Autowired
-//    private BookService bookService;
-//
-//    @Test
-//    public void testAddBook() {
-//        // Implement test
-//    }
-//
-//    @Test
-//    public void testUpdateBook() {
-//        // Implement test
-//    }
-//
-//    @Test
-//    public void testRemoveBook() {
-//        // Implement test
-//    }
-//}
-//
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -33,11 +33,9 @@ It will be an advantage for candidates to demonstrate the following:
   - proper usage of Http Methods and REST practices
   - understanding of [SOLID Principle][2]
   - understanding of Design patterns
-  - understanding of TDD and BDD
 
-## Submission:
-Candidates can submit their assignments via:
-  - Pull Request
+Requirement:
+    Java 17
 
 [1]: pom.xml
 [2]: https://en.wikipedia.org/wiki/SOLID

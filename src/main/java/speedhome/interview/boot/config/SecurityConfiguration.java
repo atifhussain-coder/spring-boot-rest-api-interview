@@ -29,15 +29,46 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return manager;
     }
 
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.csrf().disable()
+//                .authorizeRequests()
+//                .antMatchers("/api/books/**").hasAnyRole("LIBRARIAN", "MEMBER")
+//                .antMatchers("/api/members/self").authenticated()
+//                .antMatchers("/api/members/**").hasRole("LIBRARIAN")
+//                .antMatchers("/web/**", "/error").permitAll() // Allow access to web pages
+//                .anyRequest().authenticated()
+//                .and()
+//                .formLogin()
+//                .loginPage("/login")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .permitAll()
+//                .and()
+//                .httpBasic();
+//    }
+
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http
                 .authorizeRequests()
+                .antMatchers("/web/**", "/error").permitAll() // Allow access to web pages
+//                .antMatchers("/api/**").hasAnyRole("LIBRARIAN", "MEMBER") // Ensure REST endpoints are secured
                 .antMatchers("/api/books/**").hasAnyRole("LIBRARIAN", "MEMBER")
                 .antMatchers("/api/members/self").authenticated()
                 .antMatchers("/api/members/**").hasRole("LIBRARIAN")
                 .anyRequest().authenticated()
                 .and()
-                .httpBasic();
+                .formLogin()
+                .permitAll()
+                .and()
+                .logout()
+                .permitAll()
+                .and()
+                .csrf()
+                .ignoringAntMatchers("/api/**")
+                .and().httpBasic(); // Disable CSRF protection for API endpoints
     }
 }

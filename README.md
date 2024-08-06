@@ -42,5 +42,8 @@ Execution:
     mvn clean package
     java -jar target/boot-0.0.1-SNAPSHOT.jar
 
+for Documentation:
+    http://localhost:8080/swagger-ui/#/
+
 [1]: pom.xml
 [2]: https://en.wikipedia.org/wiki/SOLID

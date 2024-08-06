@@ -37,5 +37,10 @@ It will be an advantage for candidates to demonstrate the following:
 Requirement:
     Java 17
 
+Execution:
+    sudo apt install maven
+    mvn clean package
+    java -jar target/boot-0.0.1-SNAPSHOT.jar
+
 [1]: pom.xml
 [2]: https://en.wikipedia.org/wiki/SOLID
